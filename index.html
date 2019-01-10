@@ -37,27 +37,60 @@
        </form>
     </div><!--end navBar-->
        <main>
-            <div class=”myslider”>
+            <div class="myslider">
                     <picture>
-                        <source srcset=”images/deck1200.jpg” media=”(min-width: 29.25rem)”>
-                        <img srcset=”images/deck350.jpg” alt=”cruise ship deck”>
+                        <source srcset="images/deck1200.jpg" media="(min-width: 29.25rem)">
+                        <img srcset="images/deck350.jpg" alt="cruise ship deck">
                     </picture>
-            </div><!—end slider
+            </div><!--end myslider-->
                 
-
+<h2>Recent Blog Articles</h2>
 
        </main>
+
+       <footer>
+           <div class="firstBlock">
+                <h3>Contact Us</h3>
+            </div><!--end firstBlock-->
+
+            <div class="secondBlock">
+                <h3> News Letter</h3>
+                <p>Subscribe to our email list and stay up-to-date with our hottest offers and latest specials</p>
+                
+                <form action="#">
+                    <div class="newsLetterForm">
+                        <input type="text" placeholder="Email address" name="mail" required>
+                        <input type="submit" value="Subscribe">
+                    </div><!--end newsLetterForm-->
+                </form>
+            </div><!--end secondBlock-->
+
+            <div class="thirdBlock">
+                    <h3>Why Cabot Cruises</h3>
+                    <p>Cabot Cruises is a travvel agency providing the best cruise deals on our online travel website.  We can help you with all inclusive vacations including discounted cruises.</p>
+                    <p>We do not sell trael to residents of Delaware, Iowa, Florida, Hawaii, and Washington state because those states are just weird.  If you are a resident of one of these states, call your congressman and tell them to change the regulations.</p>
+                </div>
+
+            <div class="socialMedia">
+
+            </div><!--end socialMedia-->
+            
+            <div class="copyRight">
+                <p>&copy; 2019 Maurina Davis &bull; MaurinaDavis.com</p>
+
+            </div><!--end copyRight-->
+       </footer>
         
         <script src="main.js" async defer></script>
         <script src=https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js></script>
         <script src=”slick/slick.min.js”></script>
         <script>
             $(document).ready(function() {
-            $(‘.myslider’).slick({
+            $('.myslider').slick({
             autoplay:true,
             dots:true,
-            arrows:false
-            cssEase: ‘ease-out’,
+            arrows:false,
+            cssEase: 'ease-out',
             speed:2000,
             autoplaySpeed: 10000
             });
