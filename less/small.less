@@ -5,11 +5,12 @@
 header{
     
     background-color: @PrimaryColor;
-
-    .headerLimited{
-    flex: flex-box;
+    display:flex;
     justify-content: space-between;
-    a{
+    .headerLimited{
+    display:flex;
+    justify-content: space-between;
+    .number{
         text-decoration: none;
         color: @SecondaryColor;
         font-size: 2rem;
@@ -107,5 +108,7 @@ header{
 } /* End Mobile Styles */
 
 /*---------- slick slider ----------------------*/
-div.myslider div {width: 100%}
-div.myslider div img {width: 100%}
+div.myslider {width: 100%;
+picture {
+    width: 100%;}
+}//myslider

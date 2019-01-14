@@ -10,18 +10,29 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="main.css">
-        <link href=”slick/slick.css” rel=”stylesheet”>
-        <link href=”slick/slick-theme.css” rel=”stylesheet”>
+    <link href="slick/slick.css" rel="stylesheet">
+    <link href="slick/slick-theme.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     </head>
     <body>
        <header>
            <div class="headerLimited">
-            <img src="images/logo">
-        <a href="tel:+1-800-555-1234">(800)555-1234</a>
+            <figure class="logo">
+                <img src="images/logo1x.png"
+                srcset="images/logo1x.png 1x,
+                images/logo2x.png 2x, images/logo3x.png 3x">
+            </figure>
+        <a class="number" href="tel:+1-800-555-1234">(800)555-1234</a>
     </div><!--end headerLimited-->
        </header>
+
+    
+
+       <form class="search">
+           <input type="text" placeholder="Search">
+           <button type="submit">Search</button>
+       </form>
 
        <div class="navBar">
         <nav>
@@ -30,17 +41,24 @@
             <a href="#">Agents</a>
             <a href="#">Book</a>
         </nav>
-
-       <form class="search">
-           <input type="text" placeholder="Search">
-           <button type="submit">Search</button>
-       </form>
     </div><!--end navBar-->
        <main>
             <div class="myslider">
                     <picture>
-                        <source srcset="images/deck1200.jpg" media="(min-width: 29.25rem)">
-                        <img srcset="images/deck350.jpg" alt="cruise ship deck">
+                        <source srcset="sliders/deck1200.jpg" media="(min-width: 29.25rem)">
+                        <img srcset="sliders/deck350.jpg" alt="cruise ship deck">
+                    </picture>
+                    <picture>
+                        <source srcset="sliders/woman1200.jpg" media="(min-width: 29.25rem)">
+                        <img srcset="sliders/woman350.jpg" alt="cruise ship deck">
+                    </picture>
+                    <picture>
+                        <source srcset="sliders/lighthouse1200.jpg" media="(min-width: 29.25rem)">
+                        <img srcset="sliders/lighthouse350.jpg" alt="cruise ship deck">
+                    </picture>
+                    <picture>
+                        <source srcset="sliders/cityScap1200.jpg" media="(min-width: 29.25rem)">
+                        <img srcset="sliders/cityScap350.jpg" alt="cruise ship deck">
                     </picture>
             </div><!--end myslider-->
                 
@@ -82,19 +100,40 @@
        </footer>
         
         <script src="main.js" async defer></script>
-        <script src=https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js></script>
-        <script src=”slick/slick.min.js”></script>
-        <script>
-            $(document).ready(function() {
-            $('.myslider').slick({
+       
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script>
+    
+    $(document).ready(function(){
+        $('.myslider').slick({
             autoplay:true,
-            dots:true,
-            arrows:false,
+            dots: true,
+            arrows: false,
             cssEase: 'ease-out',
-            speed:2000,
+            speed: 2000,
             autoplaySpeed: 10000
-            });
         });
+    });
+        </script>
+        <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "TravelAgency",
+            "name": "Cabot Cruises",
+            "description": "Cabot Cruises is a travel agency providing the best cruise deals on our online travel website.",
+            "openingHours": "Mo-Fr 09:00-16:00",
+            "telephone": "+1385551234",
+            "faxNumber": "+1385559876",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "23 South Main St. Suite 16",
+                "addressLocality": "Lexington",
+                "addressRegion": "VA"
+            },
+            "image": "http://fullpath.com/logo1x.png",
+            "priceRange": "$500 to $4000"
+            }
         </script>
 
     </body>
