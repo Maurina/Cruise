@@ -9,9 +9,9 @@
         <title>Cabot Cruises</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="main.css">
-    <link href="slick/slick.css" rel="stylesheet">
-    <link href="slick/slick-theme.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="slick/slick.css" rel="stylesheet">
+        <link href="slick/slick-theme.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     </head>
@@ -19,9 +19,8 @@
        <header>
            <div class="headerLimited">
             <figure class="logo">
-                <img src="images/logo1x.png"
-                srcset="images/logo1x.png 1x,
-                images/logo2x.png 2x, images/logo3x.png 3x">
+                <img src="images/logo1x.png" alt="logo"
+                    srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x">
             </figure>
         <a class="number" href="tel:+1-800-555-1234">(800)555-1234</a>
     </div><!--end headerLimited-->
@@ -44,22 +43,22 @@
     </div><!--end navBar-->
        <main>
             <div class="myslider">
-                    <picture>
-                        <source srcset="sliders/deck1200.jpg" media="(min-width: 29.25rem)">
-                        <img srcset="sliders/deck350.jpg" alt="cruise ship deck">
-                    </picture>
-                    <picture>
-                        <source srcset="sliders/woman1200.jpg" media="(min-width: 29.25rem)">
-                        <img srcset="sliders/woman350.jpg" alt="cruise ship deck">
-                    </picture>
-                    <picture>
-                        <source srcset="sliders/lighthouse1200.jpg" media="(min-width: 29.25rem)">
-                        <img srcset="sliders/lighthouse350.jpg" alt="cruise ship deck">
-                    </picture>
-                    <picture>
-                        <source srcset="sliders/cityScap1200.jpg" media="(min-width: 29.25rem)">
-                        <img srcset="sliders/cityScap350.jpg" alt="cruise ship deck">
-                    </picture>
+              <picture>
+                  <source srcset="sliders/lighthouse1200.jpg" media="(min-width: 29.25rem">
+                    <img srcset="sliders/lighthouse350.jpg" alt="lighthouse">
+              </picture>
+              <picture>
+                <source srcset="sliders/woman1200.jpg" media="(min-width: 29.25rem">
+                  <img srcset="sliders/woman350.jpg" alt="woman">
+            </picture>
+            <picture>
+                <source srcset="sliders/deck1200.jpg" media="(min-width: 29.25rem">
+                  <img srcset="sliders/deck350.jpg" alt="deck">
+            </picture>
+            <picture>
+                <source srcset="sliders/cityScap1200.jpg" media="(min-width: 29.25rem">
+                  <img srcset="sliders/cityScap350.jpg" alt="City">
+            </picture>
             </div><!--end myslider-->
                 
 <h2>Recent Blog Articles</h2>
@@ -94,7 +93,7 @@
             </div><!--end socialMedia-->
             
             <div class="copyRight">
-                <p>&copy; 2019 Maurina Davis &bull; MaurinaDavis.com</p>
+                <p>&copy; 2019 Maurina Davis &bull; login</p>
 
             </div><!--end copyRight-->
        </footer>
@@ -105,7 +104,7 @@
     <script src="slick/slick.min.js"></script>
     <script>
     
-    $(document).ready(function(){
+  $(document).ready(function(){
         $('.myslider').slick({
             autoplay:true,
             dots: true,
