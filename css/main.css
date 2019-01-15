@@ -4,19 +4,36 @@
   box-sizing: border-box;
 }
 /*-----------------------Header------------------------------------------*/
+header {
+  background-color: #f9f4f5;
+}
 header .headerLimited {
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
+  align-content: flex-end;
 }
 header .headerLimited .number {
   text-decoration: none;
-  color: #f9f4f5;
+  color: #011502;
   font-size: 2rem;
+  padding-top: 5%;
+}
+.sizeRestraint {
+  max-width: 1200px;
 }
 /*---------- slick slider ----------------------*/
 .myslider {
   width: 100%;
 }
 .myslider img {
+  width: 100%;
+}
+h2 {
+  color: #a349a4;
+  font-size: 2rem;
+}
+/*---------- Articles ----------------------*/
+.articleOn img {
   width: 100%;
 }
