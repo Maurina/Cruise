@@ -1,7 +1,10 @@
 /*---------- slick slider ----------------------*/
-.myslider {width: 100%;
+.myslider {
+    width: 100%;
+    
     img {
-        width: 100%;}
+        width: 100%;
+    }//img
     }//myslider
     
     h2{
@@ -12,13 +15,24 @@
     
     
     /*---------- Articles ----------------------*/
+    .sizeRestraint{
+        max-width: 1200px;
+        margin: 0 auto;
+        display:flex;
+        flex-wrap: wrap;
+        border: green 2px solid;
+    }
     .articleOn{
+        width: 25%;
+        border: blue 2px solid;
         position:relative;
-        width: 33.33%;
+        margin-bottom: 2%;
+        
 
         img{
-            position: absolute;
+            display: block;
             opacity: 75%;
+            width: 100%;
         }
 
         img:hover{
@@ -28,11 +42,27 @@
         span{
             position: absolute;
             display:block;
-            bottom:0;
+           top:0;
             width: 100%;
             color: #fff;
             font-size: 1.5rem;
-            background-color: rgba(14, 12, 12, 0.5)
+            background-color: rgba(14, 12, 12, 0.5);
+            padding: .3rem 2%;
+            text-align: center;
+          
         }
+
    
+}//.articleOn
+ 
+@media @mobile {
+    .articleOn{
+        width: 100%;
+    }
+}
+
+footer{
+    background-color:@DkAccent;
+    color: #fff;
+    font-size: 1.5rem;
 }
