@@ -27,30 +27,31 @@
        </header>
 </div><!--end headerLimited-->       
 
-<div class="navLimited">
        <div class="navBar">
         <nav class="clearfix">
             <button id="hamburgerBtn"></button>
                 <ul id="primaryNav" class="closed">
                     <li class="active"><a href="index.html">Home</a></li>
                     <li><a href="#">Cruises</a></li>
-                    <li class="parent"><a href="#">Agents</a></li>
+                    <li class="parent"><a href="#">Agents</a>
                         <ul>
                             <li><a href="#">Something</a></li>
                             <li><a href="#">Something</a></li>
                         </ul>
+                    </li>
                     <li><a href="#">Book</a></li>
                 </ul>
         </nav>
 
-       <form class="search">
-           <input type="text" placeholder="Search...">
-           <button type="submit">Search</button>
+    <div class="searchBox">
+       <form action="/action_page.php" class="search">
+           <input type="text" placeholder="Search..." name="search">
+           <button type="submit"><i class="fa fa-search"></i></button>
        </form>
-
+    </div><!--end searchBox-->
    
     </div><!--end navBar-->
-</div><!--end navLimited-->
+
        <main>
             <div class="myslider">
               <picture>
@@ -117,8 +118,8 @@
                 
                 <form action="#">
                     <div class="newsLetterForm">
-                        <input type="text" placeholder="Email address" name="mail" required>
-                        <input type="submit" value="Subscribe">
+                        <input type="text" placeholder="Email address" name="mail" required class="emailAddress">
+                        <input type="submit" value="Subscribe" class="submitButton">
                     </div><!--end newsLetterForm-->
                 </form>
             </div><!--end secondBlock-->
@@ -141,13 +142,13 @@
             </div><!--end socialMedia-->
     </div><!--end wrapperSocial-->
             <div class="copyRight">
-                <p>&copy; 2019 Maurina Davis &bull; login</p>
+                <h5>&copy; 2019 Maurina Davis &bull; login</h5>
 
             </div><!--end copyRight-->
         
        </footer>
         
-        <script src="main.js" type="module" async defer></script>
+        <script src="main.js"></script>
        
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="slick/slick.min.js"></script>
@@ -165,7 +166,24 @@
     });
         </script>
         <script type="application/ld+json">
-
+            {
+                "@context": "http://schema.org",
+                "@type": "TravelAgency",
+                "name": "Cabot Cruises",
+                "description": "Cabot Cruises is a travel agency providing the best cruise deals on our online travel website.",
+                "openingHours": "Mo-Fr 09:00-16:00",
+                "telephone": "+1385551234",
+                "faxNumber": "+1385559876",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "23 South Main St. Suite 16",
+                    "addressLocality": "Lexington",
+                    "addressRegion": "VA"
+                },
+                "image": "http://fullpath.com/logo1x.png",
+                "priceRange": "$500 to $4000"
+                }
+            ]
         </script>
 
     </body>

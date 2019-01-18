@@ -142,38 +142,61 @@ table {
   box-sizing: border-box;
 }
 /* Navigation for Large Screens  -------------------------------------------------------- */
-.navLimited {
-  background-color: #011502;
-}
 .navBar {
+  background-color: #011502;
   display: flex;
   justify-content: space-between;
   align-content: center;
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 1%;
 }
 nav {
-  width: 33.33%;
+  max-width: 1200px;
+  position: relative;
+}
+nav button {
+  display: none;
 }
 nav ul {
   display: flex;
   justify-content: space-around;
-  padding: 1%;
+  padding: 4%;
+  margin-left: 2%;
 }
 nav li {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 nav a {
   text-decoration: none;
   color: #fff;
+  padding-left: 2rem;
 }
-.search {
-  align-self: center;
-  margin-right: 0;
+nav ul li.active a {
+  color: #fe5b35;
 }
-.button {
-  margin-left: 0;
+nav ul li a:hover {
+  color: #ffae42;
+}
+nav ul li ul {
+  display: flex;
+  flex-direction: column;
+  left: -999em;
+  z-index: 99;
+  background-color: #011502;
+  position: absolute;
+  margin-left: 4%;
+  margin-top: 0.2%;
+}
+nav ul li:hover ul {
+  left: auto;
+}
+nav ul li ul li {
+  width: 100%;
+  margin: 6%;
+  padding-bottom: 2%;
+  padding-right: 0.5rem;
+}
+nav ul li ul li a {
+  padding-left: 0;
 }
 #hamburgerBtn {
   display: none;
@@ -274,9 +297,29 @@ nav a {
     top: 0;
     right: 1%;
     padding-top: 2%;
+    background-color: #011502;
   }
 }
 /* End Mobile Styles */
+/*------------Search Bar ------------------------------------------*/
+.searchBox {
+  align-self: center;
+}
+.searchBox input[type=text] {
+  padding: 6px;
+  font-size: 1rem;
+  border: none;
+}
+.searchBox button {
+  background-color: #f9f4f5;
+  padding: 6px 10px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+.searchBox button:hover {
+  background-color: #ffae42;
+}
 /*---------- slick slider ----------------------*/
 .myslider {
   width: 100%;
@@ -384,7 +427,7 @@ h3 {
 }
 p {
   font-size: 1rem;
-  padding-bottom: 3%;
+  padding-bottom: 2%;
 }
 .firstBlock {
   width: 33%;
@@ -407,6 +450,17 @@ p {
   .secondBlock {
     width: 48%;
     margin-bottom: 2%;
+  }
+  .secondBlock .newsLetterForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .secondBlock .newsLetterForm .emailAddress {
+    width: 100%;
+  }
+  .secondBlock .newsLetterForm .submitButton {
+    border-radius: 25px;
   }
   .thirdBlock {
     width: 98%;
@@ -451,7 +505,6 @@ p {
   text-align: center;
   padding: 1%;
 }
-p {
+h5 {
   font-size: 1rem;
-  color: #f9f4f5;
 }

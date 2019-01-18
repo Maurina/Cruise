@@ -8,58 +8,88 @@
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /* Navigation for Large Screens  -------------------------------------------------------- */
-.navLimited{
-	background-color: @PrimaryColor;
-	
-}
+
 
 .navBar{
-	
+	background-color: @PrimaryColor;
 	display: flex;
 	justify-content: space-between;
 	align-content: center;
-	max-width: 1200px;
 	margin: 0 auto;
-	padding: 1%;
+
 }
 
 nav{
+	max-width: 1200px;
+	position: relative;
+	button {display:none;}
 	
-	width: 33.33%; 
+
 	ul{
 		display: flex;
 		justify-content: space-around;
-		padding: 1%;
+		padding: 4%;
+		margin-left: 2%;
 	}
+	
 	li{
-		font-size: 1rem;
+		font-size: 1.2rem;
 	
 	}
 	a{
 		text-decoration: none;
 		color: #fff;
+		padding-left: 2rem;
 	
 	}
-}
 
-.search{
-	align-self: center;
-	margin-right: 0;
-}
+	ul li.active a { 
+		color: @LtAccent;
 
-.button {
-	margin-left: 0;
-}
+	}
+
+	ul li a:hover{
+		color: @DkAccent;
+	}
+
+	ul li ul {
+		display:flex;
+		flex-direction: column;
+		left: -999em;
+		z-index: 99;
+		background-color:@PrimaryColor;
+		position: absolute;
+		margin-left: 4%;
+		margin-top: .2%;
+	}
+
+	ul li:hover ul {left:auto;}
+
+	ul li ul li{
+		width: 100%;
+		margin: 6%;
+		
+		padding-bottom: 2%;
+		padding-right: .5rem;
+	}
+
+	ul li ul li a{
+	
+		padding-left: 0;
+		
+		
+	}
 
 
+}//end nav
 
 #hamburgerBtn { display: none; } /* hide the navigation button by default */
 
 @media only screen and (max-width: 64rem) {
 
-	
 
-/* Navigation Button  -------------------------------------------------------- */
+	
+	/* Navigation Button  -------------------------------------------------------- */
     body { padding-top: 50px; }
     
     nav {
@@ -151,7 +181,33 @@ nav{
         top:0;
 		right: 1%;
 		padding-top: 2%;
-		
+		background-color: @PrimaryColor;
 
 	}
 } /* End Mobile Styles */
+
+/*------------Search Bar ------------------------------------------*/
+.searchBox{
+	align-self: center;
+	input[type=text] {
+		padding: 6px;
+		font-size: 1rem;
+		border: none;
+	}
+
+	button{
+		
+		background-color: @SecondaryColor;
+		padding: 6px 10px;
+		font-size: 1rem;
+		border: none;
+		cursor: pointer;
+	}//button
+
+	button:hover{
+		background-color:@DkAccent;
+
+	
+	}
+}//searchBox
+
