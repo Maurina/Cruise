@@ -8,10 +8,13 @@
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /* Navigation for Large Screens  -------------------------------------------------------- */
-
+.navBackground{
+	background-color: @PrimaryColor;
+}
 
 .navBar{
 	background-color: @PrimaryColor;
+	max-width: 1200px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -20,7 +23,7 @@
 }
 
 nav{
-	max-width: 1200px;
+	
 	position: relative;
 	button {display:none;}
 	

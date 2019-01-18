@@ -142,15 +142,18 @@ table {
   box-sizing: border-box;
 }
 /* Navigation for Large Screens  -------------------------------------------------------- */
+.navBackground {
+  background-color: #011502;
+}
 .navBar {
   background-color: #011502;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
 }
 nav {
-  max-width: 1200px;
   position: relative;
 }
 nav button {
@@ -468,9 +471,10 @@ p {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding: 2%;
 }
 .newsLetterForm .emailAddress {
-  width: 100%;
+  width: 80%;
   border-radius: 5px;
   border: none;
   font-size: 1.5rem;
@@ -482,7 +486,7 @@ p {
 }
 .newsLetterForm .submitButton {
   border-radius: 15px;
-  width: 100%;
+  width: 80%;
   font-size: 1.5rem;
   background-color: #f9f4f5;
   color: #011502;
