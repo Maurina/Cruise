@@ -131,7 +131,7 @@ nav{
         font-family: Verdana;
         font-weight: normal;
 	}
-    #primaryNav li.active a{background-color: rgba(0,0,0,0.25);}
+	#primaryNav li.active a{color: @LtAccent;}
 	#primaryNav li a {
 		display: block;
 		width: 100%;
@@ -143,28 +143,26 @@ nav{
 		border-top: 1px solid rgba(0,0,0,.2);
 	}
 	#primaryNav li a:hover {
-		background-color: rgba(0,0,0,.5);
+		color: @DkAccent;
 	}
 
 	/* Toggle the navigation bar to expand down  */
 	#primaryNav.open {height: auto;}
 
 	/* Submenus – optional .parent class indicates dropdowns */
-	#primaryNav > li:hover > a {background: rgba(0,0,0,.5);}
+	#primaryNav > li:hover > a {color: @DkAccent;}
 	#primaryNav li.parent > a:after {
         font-size: .75rem;
 		content: "\25BC";
 		color: rgba(255,255,255,.5);
 		float: right;
 	}
-	#primaryNav li.parent > a:hover {
-		background: rgba(0,0,0,.75);
-	}
+	#primaryNav li.parent > a:hover {color: @DkAccent;}
     /*hide the sub menu items by default*/
 	#primaryNav li ul {
 		display: none;
-		background: rgba(0,0,0,.3);
-		padding: 0;
+		background: @PrimaryColor;
+		padding-left: 1%;
 	}
 	#primaryNav li ul a {
 		border-top: solid 1px rgba(0,0,0,0.2);
@@ -189,19 +187,28 @@ nav{
 /*------------Search Bar ------------------------------------------*/
 .searchBox{
 	align-self: center;
+	margin-right: 4%;
 	input[type=text] {
 		padding: 6px;
 		font-size: 1rem;
 		border: none;
+		margin-right: -4px;
+		width: 80px;
+		border-radius: 5px 0 0 5px;
+	}
+
+	input[type=text]:focus{
+		width: 150px;
 	}
 
 	button{
-		
+		border-radius: 0 5px 5px 0;
 		background-color: @SecondaryColor;
 		padding: 6px 10px;
 		font-size: 1rem;
 		border: none;
 		cursor: pointer;
+		margin: 0;
 	}//button
 
 	button:hover{

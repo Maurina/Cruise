@@ -1,7 +1,17 @@
 footer{
     background-color:@DkAccent;
-    color: @SecondaryColor;
+    color: @PrimaryColor;
     font-size: 1.5rem;
+
+    a{
+        text-decoration: none;
+        color:@PrimaryColor;
+    }
+
+    a:hover{
+        font-weight: bold;
+    }
+   
 }
 
 .footerWrapper{
@@ -34,6 +44,52 @@ p{
     padding: 2%;
 }
 
+.newsLetterForm{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .emailAddress{
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        font-size: 1.5rem;
+        background-color: @SecondaryColor;
+        color: @PrimaryColor;
+        margin-top: 5%;
+        text-align: center;
+        padding: 2%;
+    }
+    .submitButton{
+        border-radius: 15px;
+        width: 100%;
+        font-size: 1.5rem;
+        background-color: @SecondaryColor;
+        color: @PrimaryColor;
+        font-weight: bold;
+        margin-top: 5%;
+        padding: 2%;
+        border: none;
+    }
+
+    .submitButton:hover{
+        background-color:@LtAccent;
+    }
+   
+   
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 4%;
+}
+
+p{
+    padding-bottom: 6%;
+}
+
+
 .thirdBlock{
     width: 33%;
     padding: 2%;
@@ -49,19 +105,6 @@ p{
     .secondBlock{
         width: 48%;
         margin-bottom: 2%;
-
-        .newsLetterForm{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-
-            .emailAddress{
-                width: 100%;
-            }
-            .submitButton{
-                border-radius: 25px;
-            }
-        }
 
 
 
@@ -106,6 +149,7 @@ p{
    margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
+  color: @SecondaryColor;
 
   i{
       padding:2%;
