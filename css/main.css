@@ -146,7 +146,7 @@ table {
   background-color: #011502;
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   margin: 0 auto;
 }
 nav {
@@ -414,7 +414,7 @@ h2 {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-content: flex-end;
+  align-items: center;
 }
 .headerLimited header .logo {
   padding-left: 2%;
