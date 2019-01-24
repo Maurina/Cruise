@@ -141,66 +141,6 @@ table {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* Navigation for Large Screens  -------------------------------------------------------- */
-.navBackground {
-  background-color: #011502;
-}
-.navBar {
-  background-color: #011502;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-}
-nav {
-  position: relative;
-}
-nav button {
-  display: none;
-}
-nav ul {
-  display: flex;
-  justify-content: space-around;
-  padding: 4%;
-  margin-left: 2%;
-}
-nav li {
-  font-size: 1.2rem;
-}
-nav a {
-  text-decoration: none;
-  color: #fff;
-  padding-left: 2rem;
-}
-nav ul li.active a {
-  color: #fe5b35;
-}
-nav ul li a:hover {
-  color: #ffae42;
-}
-nav ul li ul {
-  display: flex;
-  flex-direction: column;
-  left: -999em;
-  z-index: 99;
-  background-color: #011502;
-  position: absolute;
-  margin-left: 4%;
-  margin-top: 0.2%;
-}
-nav ul li:hover ul {
-  left: auto;
-}
-nav ul li ul li {
-  width: 100%;
-  margin: 6%;
-  padding-bottom: 2%;
-  padding-right: 0.5rem;
-}
-nav ul li ul li a {
-  padding-left: 0;
-}
 #hamburgerBtn {
   display: none;
 }
@@ -209,6 +149,12 @@ nav ul li ul li a {
   /* Navigation Button  -------------------------------------------------------- */
   body {
     padding-top: 50px;
+  }
+  .navBar {
+    flex-direction: column;
+  }
+  ul {
+    flex-direction: column;
   }
   nav {
     position: absolute;
@@ -340,6 +286,66 @@ nav ul li ul li a {
 .searchBox button:hover {
   background-color: #ffae42;
 }
+/* Navigation for Large Screens  -------------------------------------------------------- */
+.navBackground {
+  background-color: #011502;
+}
+.navBar {
+  background-color: #011502;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+nav {
+  position: relative;
+}
+nav button {
+  display: none;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 4%;
+  margin-left: 2%;
+}
+nav li {
+  font-size: 1.2rem;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding-left: 2rem;
+}
+nav ul li.active a {
+  color: #fe5b35;
+}
+nav ul li a:hover {
+  color: #ffae42;
+}
+nav ul li ul {
+  display: flex;
+  flex-direction: column;
+  left: -999em;
+  z-index: 99;
+  background-color: #011502;
+  position: absolute;
+  margin-left: 4%;
+  margin-top: 0.2%;
+}
+nav ul li:hover ul {
+  left: auto;
+}
+nav ul li ul li {
+  width: 100%;
+  margin: 6%;
+  padding-bottom: 2%;
+  padding-right: 0.5rem;
+}
+nav ul li ul li a {
+  padding-left: 0;
+}
 /*---------- slick slider ----------------------*/
 .myslider {
   width: 100%;
@@ -425,14 +431,16 @@ h2 {
 .headerLimited header .number {
   text-decoration: none;
   color: #011502;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: bold;
   padding-right: 2%;
   padding-top: 5%;
   padding-bottom: 1%;
 }
 @media (max-width: 32rem) {
-  width: 50%;
+  .number {
+    font-size: 1rem;
+  }
 }
 footer {
   background-color: #ffae42;
