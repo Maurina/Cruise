@@ -7,84 +7,7 @@
 /*  apply a natural box layout model to all elements  */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-/* Navigation for Large Screens  -------------------------------------------------------- */
-.navBackground{
-	background-color: @PrimaryColor;
-}
 
-.navBar{
-	background-color: @PrimaryColor;
-	max-width: 1200px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin: 0 auto;
-
-}
-
-nav{
-	
-	position: relative;
-	button {display:none;}
-	
-
-	ul{
-		display: flex;
-		justify-content: space-around;
-		padding: 4%;
-		margin-left: 2%;
-	}
-	
-	li{
-		font-size: 1.2rem;
-	
-	}
-	a{
-		text-decoration: none;
-		color: #fff;
-		padding-left: 2rem;
-	
-	}
-
-	ul li.active a { 
-		color: @LtAccent;
-
-	}
-
-	ul li a:hover{
-		color: @DkAccent;
-	}
-
-	ul li ul {
-		display:flex;
-		flex-direction: column;
-		left: -999em;
-		z-index: 99;
-		background-color:@PrimaryColor;
-		position: absolute;
-		margin-left: 4%;
-		margin-top: .2%;
-	}
-
-	ul li:hover ul {left:auto;}
-
-	ul li ul li{
-		width: 100%;
-		margin: 6%;
-		
-		padding-bottom: 2%;
-		padding-right: .5rem;
-	}
-
-	ul li ul li a{
-	
-		padding-left: 0;
-		
-		
-	}
-
-
-}//end nav
 
 #hamburgerBtn { display: none; } /* hide the navigation button by default */
 
@@ -94,7 +17,14 @@ nav{
 	
 	/* Navigation Button  -------------------------------------------------------- */
     body { padding-top: 50px; }
-    
+	.navBar{
+		flex-direction: column;
+	}
+
+	ul{
+		flex-direction: column;
+	}
+	
     nav {
         position: absolute;
         top:0;
@@ -229,3 +159,81 @@ nav{
 	}
 }//searchBox
 
+/* Navigation for Large Screens  -------------------------------------------------------- */
+.navBackground{
+	background-color: @PrimaryColor;
+}
+
+.navBar{
+	background-color: @PrimaryColor;
+	max-width: 1200px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+
+}
+
+nav{
+	
+	position: relative;
+	button {display:none;}
+	
+
+	ul{
+		display: flex;
+		justify-content: space-around;
+		padding: 4%;
+		margin-left: 2%;
+	}
+	
+	li{
+		font-size: 1.2rem;
+	
+	}
+	a{
+		text-decoration: none;
+		color: #fff;
+		padding-left: 2rem;
+	
+	}
+
+	ul li.active a { 
+		color: @LtAccent;
+
+	}
+
+	ul li a:hover{
+		color: @DkAccent;
+	}
+
+	ul li ul {
+		display:flex;
+		flex-direction: column;
+		left: -999em;
+		z-index: 99;
+		background-color:@PrimaryColor;
+		position: absolute;
+		margin-left: 4%;
+		margin-top: .2%;
+	}
+
+	ul li:hover ul {left:auto;}
+
+	ul li ul li{
+		width: 100%;
+		margin: 6%;
+		
+		padding-bottom: 2%;
+		padding-right: .5rem;
+	}
+
+	ul li ul li a{
+	
+		padding-left: 0;
+		
+		
+	}
+
+
+}//end nav

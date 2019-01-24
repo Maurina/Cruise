@@ -1,6 +1,6 @@
 // variables
 @PrimaryColor:  #011502;
-@SecondaryColor: #f9f4f5	;
+@SecondaryColor: #f9f4f5;
 @LtAccent: #fe5b35;
 @DkAccent: #ffae42;
 
@@ -10,23 +10,3 @@
 @primaryFont:'Lora', serif;
 
 
-// mixins
-.customLayout(@layout){
-    display: flex;
-    justify-content: @layout
-  }
-  
-  .customAlignment(@alignment){
-    display:flex;
-    align-content: @alignment;
-  }
-
-  .customBtn(@width, @height, @background, @font-size, @font-color, @border-radius){
-      width: @width;
-      height: @height;
-      background: @background;
-      font-size: @font-size;
-      color: @font-color;
-      border-radius: @border-radius;
-
-  }
