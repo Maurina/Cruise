@@ -1,0 +1,232 @@
+
+/*  apply a natural box layout model to all elements  */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+
+#hamburgerBtn { display:none;}
+
+@media only screen and (max-width: 35rem){
+
+  /*Navigation Button ----------------------------------------------------------*/
+  .navBackground{
+    background-color: @PrimaryColor;
+  }
+
+  .navBar{
+    position: absolute;
+    top: 0;
+    background-color: @PrimaryColor;
+  }
+  nav{
+   
+    width: 60%;
+    background-color: @PrimaryColor;
+    z-index: 1;
+  }
+
+  #hamburgerBtn{
+    display: block;
+    width: 7rem;
+    height: 2.75rem;
+    background-image: url(../images/menuOpenWhite.png);
+    background-color: rgba(0,0,0,0.1);
+    background-position: 2vw center;
+    background-repeat: no-repeat;
+    border: 0 none;
+  }
+
+  #hamburgerBtn.open{
+    background-image: url(../images/menuCloseWhite.png);
+    background-position: 2vw center;
+    background-repeat: no-repeat;
+  }
+
+  /* Navigation Bar -------------------------------------------------------------*/
+
+ul{
+  flex-direction: column;
+}
+
+  #primaryNav{
+    height: 0;
+    overflow: hidden;
+    width: 20rem;
+    background-color: @PrimaryColor;
+    margin: 0;
+    padding: 0;
+    z-index: 998;
+    font-weight: normal;
+  }
+
+  #primaryNav li.active a{background-color: darken(@PrimaryColor, 20%);}
+  #primaryNav li a {
+    display: block;
+    width: 100%;
+    padding: .75rem 2vw;
+    font-size: 14px;
+    text-shadow: -1px -1px 0 rgba(0,0,0,.15);
+    color: white;
+    text-decoration: none;
+    border-top: 1px solid rgba(0,0,0,.2);
+  }
+
+  #primaryNav li a:hover{
+    background-color: rgba(0,0,0,.5);
+  }
+
+  /* Toggle the navigation bar to expand down */
+  #primaryNav.open {height: auto;}
+
+  /* Submenus --------------------------------------*/
+  #primaryNav > li:hover > a {background: rgba(0,0,0,.5);}
+  #primaryNav li.parent > a:after {
+    font-size: .75rem;
+    content: "\25BC";
+    color: rgba(255,255,255,.5);
+   float:right;
+
+  }
+
+  #primaryNav li.parent > a:hover {
+    background: rgba(0,0,0,.75);
+  }
+
+
+  /* Hide the sub menu items by default ---------------------*/
+  #primaryNav li ul {
+    display: none;
+    background: rgba(0,0,0,.3);
+    padding: 0;
+  }
+  #primaryNav li ul a{
+    border-top: solid 1px rgba(0,0,0,.2);
+    font-size: 12px;
+    padding: 10px 5%;
+    font-weight: normal;
+  }
+  #primaryNav li:hover ul {display:block;}
+}//media small screens
+
+/*------------Search Bar ------------------------------------------*/
+.searchBox{
+	background-color: @PrimaryColor;
+
+  align-self: center;
+  
+  input[type=text] {
+    padding: 6px;
+		font-size: 1rem;
+		border: none;
+		margin-right: -4px;
+		width: 80px;
+		border-radius: 5px 0 0 5px;
+	}
+
+	input[type=text]:focus{
+		width: 150px;
+	}
+
+	button{
+		border-radius: 0 5px 5px 0;
+		background-color: @SecondaryColor;
+		padding: 6px 10px;
+		font-size: 1rem;
+		border: none;
+		cursor: pointer;
+		margin: 0;
+	}//button
+
+	button:hover{
+		background-color:@DkAccent;
+
+	
+	}
+}//searchBox
+
+
+@media @mobile{
+	.search{
+		width: 100%;
+	 padding-right: 1%;
+	}
+}
+
+
+
+/* Navigation for Large Screens  -------------------------------------------------------- */
+.navBackground{
+  background-color: @PrimaryColor;
+}
+
+.navBar{
+  display:flex;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+
+nav{
+  width: 50%;
+	background-color: @PrimaryColor;
+
+ ul li.active a { 
+		color: @LtAccent;
+
+	}
+ul{
+  margin-left: 2%;
+  border-left: 1px solid rgba(0,0,0,.2);
+  display: flex;
+}
+
+ul li a{
+  display: block;
+  border: none;
+  border-right: 1px solid rgba(0,0,0,.2);
+  background: none;
+  font-size: .9rem;
+  padding: .7rem .9rem;
+  color: rgba(255,255,255,1);
+  text-decoration: none;
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+
+ul li a:hover {
+  background: darken(@PrimaryColor, 5%);
+  color: #ffae42;
+}
+
+ul li ul {/* rules for sub menu items*/
+  z-index: 99;
+  position: absolute;
+  background-color: darken(@PrimaryColor, 10%);
+  left: -999em; /*pushes the menu way off to the side */
+  width: 10em;
+  display:flex;
+  flex-direction: column;
+}
+
+ul li ul li{ /*overides the float and line from the parent ul*/
+  float: none;
+  border-right: none;
+  border-top: solid 1px rgba(0,0,0,.2);
+}
+
+ul li:hover ul { /*this displays the menus as drop downs */
+  left: auto;
+  margin-left: 0;
+}
+
+
+}//end nav
+
+
+/* Clearfix: force and Element not to collapse --------*/
+
+.clearfix:after{
+  content:"";
+  display: table;
+  clear: both;
+}
