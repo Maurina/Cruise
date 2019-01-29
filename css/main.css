@@ -473,10 +473,8 @@ nav ul li:hover ul {
     background-color: #36454f;
     display: flex;
     justify-content: space-evenly;
-    border: purple 4px solid;
   }
   nav {
-    border: green 4px solid;
     width: 40%;
     background-color: #36454f;
     z-index: 1;
@@ -561,7 +559,6 @@ nav ul li:hover ul {
   }
   .searchBox {
     width: 60%;
-    border: red 4px solid;
     justify-self: space-between;
   }
   .searchBox input {
