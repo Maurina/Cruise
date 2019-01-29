@@ -1,26 +1,140 @@
 
 /*  apply a natural box layout model to all elements  */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+/*------------Search Bar ------------------------------------------*/
+.searchBox{
+	background-color: @PrimaryColor;
+
+  align-self: center;
+  
+  input[type=text] {
+    padding: 6px;
+		font-size: 1rem;
+		border: none;
+		margin-right: -4px;
+		width: 80px;
+		border-radius: 5px 0 0 5px;
+	}
+
+	input[type=text]:focus{
+		width: 80%;
+	}
+
+	button{
+		border-radius: 0 5px 5px 0;
+		background-color: @SecondaryColor;
+		padding: 6px 10px;
+		font-size: 1rem;
+		border: none;
+		cursor: pointer;
+    margin: 0;
+    margin-right: 16px;
+	}//button
+
+	button:hover{
+		background-color:@DkAccent;
+
+	
+	}
+}//searchBox
+
+
+
+
+
+/* Navigation for Large Screens  -------------------------------------------------------- */
+
+.navBackground{
+  background-color: @PrimaryColor;
+}
+
+.navBar{
+  display:flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+nav{
+  width: 50%;
+	background-color: @PrimaryColor;
+
+ ul li.active a { 
+		color: @LtAccent;
+
+	}
+ul{
+  margin-left: 2%;
+  border-left: 1px solid rgba(0,0,0,.2);
+  display: flex;
+}
+
+ul li a{
+  display: block;
+  border: none;
+  border-right: 1px solid rgba(0,0,0,.2);
+  background: none;
+  font-size: .9rem;
+  padding: .7rem .9rem;
+  color: rgba(255,255,255,1);
+  text-decoration: none;
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+
+ul li a:hover {
+  background: darken(@PrimaryColor, 5%);
+  color: #ffae42;
+}
+
+ul li ul {/* rules for sub menu items*/
+  z-index: 99;
+  position: absolute;
+  background-color: darken(@PrimaryColor, 10%);
+  left: -999em; /*pushes the menu way off to the side */
+  width: 10em;
+  display:flex;
+  flex-direction: column;
+}
+
+ul li ul li{ /*overides the float and line from the parent ul*/
+
+  border-right: none;
+  border-top: solid 1px rgba(0,0,0,.2);
+}
+
+ul li:hover ul { /*this displays the menus as drop downs */
+  left: auto;
+  margin-left: 0;
+}
+
+
+}//end nav
 
 
 
 #hamburgerBtn { display:none;}
 
-@media only screen and (max-width: 35rem){
+@media only screen and (max-width: 32rem){
 
   /*Navigation Button ----------------------------------------------------------*/
   .navBackground{
     background-color: @PrimaryColor;
+    width: 100%;
   }
 
   .navBar{
     position: absolute;
     top: 0;
     background-color: @PrimaryColor;
+    display: flex;
+    justify-content: space-evenly;
+    border: purple 4px solid;
   }
   nav{
-   
-    width: 60%;
+    border: green 4px solid;
+    width: 40%;
     background-color: @PrimaryColor;
     z-index: 1;
   }
@@ -47,6 +161,8 @@
 ul{
   flex-direction: column;
 }
+
+
 
   #primaryNav{
     height: 0;
@@ -105,122 +221,28 @@ ul{
     padding: 10px 5%;
     font-weight: normal;
   }
-  #primaryNav li:hover ul {display:block;}
+  #primaryNav li:hover ul {display:block;
+    position: relative;
+  }
+
+
+  .searchBox{
+    width: 60%;
+    border: red 4px solid;
+    justify-self: space-between;
+
+    input{
+      margin-left: 25%;
+    }
+
+    input[type=text]:focus{
+      width: 50%;
+    }
+
+  }
+ 
 }//media small screens
 
-/*------------Search Bar ------------------------------------------*/
-.searchBox{
-	background-color: @PrimaryColor;
-
-  align-self: center;
-  
-  input[type=text] {
-    padding: 6px;
-		font-size: 1rem;
-		border: none;
-		margin-right: -4px;
-		width: 80px;
-		border-radius: 5px 0 0 5px;
-	}
-
-	input[type=text]:focus{
-		width: 150px;
-	}
-
-	button{
-		border-radius: 0 5px 5px 0;
-		background-color: @SecondaryColor;
-		padding: 6px 10px;
-		font-size: 1rem;
-		border: none;
-		cursor: pointer;
-		margin: 0;
-	}//button
-
-	button:hover{
-		background-color:@DkAccent;
-
-	
-	}
-}//searchBox
-
-
-@media @mobile{
-	.search{
-		width: 100%;
-	 padding-right: 1%;
-	}
-}
-
-
-
-/* Navigation for Large Screens  -------------------------------------------------------- */
-.navBackground{
-  background-color: @PrimaryColor;
-}
-
-.navBar{
-  display:flex;
-  justify-content: space-between;
-  max-width: 1200px;
-}
-
-
-nav{
-  width: 50%;
-	background-color: @PrimaryColor;
-
- ul li.active a { 
-		color: @LtAccent;
-
-	}
-ul{
-  margin-left: 2%;
-  border-left: 1px solid rgba(0,0,0,.2);
-  display: flex;
-}
-
-ul li a{
-  display: block;
-  border: none;
-  border-right: 1px solid rgba(0,0,0,.2);
-  background: none;
-  font-size: .9rem;
-  padding: .7rem .9rem;
-  color: rgba(255,255,255,1);
-  text-decoration: none;
-  -webkit-transition: background 0.3s linear;
-  transition: background 0.3s linear;
-}
-
-ul li a:hover {
-  background: darken(@PrimaryColor, 5%);
-  color: #ffae42;
-}
-
-ul li ul {/* rules for sub menu items*/
-  z-index: 99;
-  position: absolute;
-  background-color: darken(@PrimaryColor, 10%);
-  left: -999em; /*pushes the menu way off to the side */
-  width: 10em;
-  display:flex;
-  flex-direction: column;
-}
-
-ul li ul li{ /*overides the float and line from the parent ul*/
-  float: none;
-  border-right: none;
-  border-top: solid 1px rgba(0,0,0,.2);
-}
-
-ul li:hover ul { /*this displays the menus as drop downs */
-  left: auto;
-  margin-left: 0;
-}
-
-
-}//end nav
 
 
 /* Clearfix: force and Element not to collapse --------*/
