@@ -568,6 +568,7 @@ nav ul li:hover ul {
 .box {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .left {
   width: 33.33%;
@@ -577,6 +578,23 @@ nav ul li:hover ul {
 .right {
   width: 70%;
   border: solid red 4px;
+  display: flex;
+  flex-direction: column;
+}
+.right .readMore {
+  align-self: flex-end;
+  border: none;
+  background-color: #fe5b35;
+  color: #000;
+  width: 33%;
+  height: 44px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+}
+@media (max-width: 32rem) {
+  .right .readMore {
+    width: 96%;
+  }
 }
 form {
   display: flex;
@@ -589,6 +607,11 @@ form select {
   color: #36454f;
   width: 50%;
   height: 44px;
+}
+@media (max-width: 32rem) {
+  form select {
+    width: 96%;
+  }
 }
 form label {
   display: flex;
@@ -603,6 +626,11 @@ form input {
   width: 50%;
   height: 44px;
 }
+@media (max-width: 32rem) {
+  form input {
+    width: 96%;
+  }
+}
 .submit {
   border: none;
   background-color: #fe5b35;
@@ -611,6 +639,20 @@ form input {
   height: 44px;
   border-radius: 20px;
   font-size: 1.5rem;
+}
+@media (max-width: 32rem) {
+  .submit {
+    width: 96%;
+  }
+}
+.agents h1 {
+  padding-bottom: 4%;
+}
+.agents h4 {
+  color: #36454f;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 2%;
 }
 .sizeRestraint {
   max-width: 1200px;

@@ -2,6 +2,7 @@
 .box{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .left{
     width: 33.33%;
@@ -12,4 +13,23 @@
 .right{
     width: 70%;
     border: solid red 4px;
+    display:flex;
+    flex-direction: column;
+
+    
+.readMore{
+    align-self: flex-end;
+    border: none;
+    background-color:@LtAccent;
+    color: #000;
+    width: 33%;
+    height: 44px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    @media @mobile{
+        width: 96%;
+    }
+
 }
+}
+
