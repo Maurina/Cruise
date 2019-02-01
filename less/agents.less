@@ -8,4 +8,37 @@ h4{
     font-weight: bold;
     padding-bottom:2%;
 }//h4
+
+
+.box{
+    display: flex;
+flex-direction: row-reverse;
+justify-content: space-between;
+}
+
+.left{
+    width: 65%;
+    @media @tablet{
+        width: 45%;
+    }
+@media @mobile{
+    width:100%;
+}
+}
+ 
+img{
+    border-radius: 30px;
+  
+}
+
+figcaption{
+    text-align: center;
+    color: @PrimaryColor;
+    @media @tablet{
+        width: 50%;
+    }
+    @media @mobile{
+        width:100%;
+    }
+}
 }//agents

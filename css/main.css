@@ -570,16 +570,40 @@ nav ul li:hover ul {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.left {
-  width: 33.33%;
-  border: solid blue 4px;
-  height: 400px;
+img {
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+@media (max-width:  64rem) {
+  img {
+    width: 48%;
+  }
+}
+@media (max-width: 32rem) {
+  img {
+    width: 100%;
+    padding-right: 4%;
+  }
 }
 .right {
-  width: 70%;
-  border: solid red 4px;
+  width: 60%;
   display: flex;
   flex-direction: column;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  justify-self: center;
+}
+@media (max-width:  64rem) {
+  .right {
+    width: 48%;
+    padding-right: 2%;
+  }
+}
+@media (max-width: 32rem) {
+  .right {
+    width: 100%;
+    padding-right: 2%;
+  }
 }
 .right .readMore {
   align-self: flex-end;
@@ -589,17 +613,18 @@ nav ul li:hover ul {
   width: 33%;
   height: 44px;
   border-radius: 20px;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 @media (max-width: 32rem) {
   .right .readMore {
     width: 96%;
+    align-self: center;
   }
 }
+.right h2 {
+  padding-bottom: 2%;
+}
 form {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   padding-top: 4%;
 }
 form select {
@@ -616,7 +641,7 @@ form select {
 form label {
   display: flex;
   flex-direction: column;
-  padding-bottom: 4%;
+  padding-bottom: 2%;
   color: #36454f;
   margin-bottom: 2%;
 }
@@ -653,6 +678,41 @@ form input {
   font-size: 1.5rem;
   font-weight: bold;
   padding-bottom: 2%;
+}
+.agents .box {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.agents .left {
+  width: 65%;
+}
+@media (max-width:  64rem) {
+  .agents .left {
+    width: 45%;
+  }
+}
+@media (max-width: 32rem) {
+  .agents .left {
+    width: 100%;
+  }
+}
+.agents img {
+  border-radius: 30px;
+}
+.agents figcaption {
+  text-align: center;
+  color: #36454f;
+}
+@media (max-width:  64rem) {
+  .agents figcaption {
+    width: 50%;
+  }
+}
+@media (max-width: 32rem) {
+  .agents figcaption {
+    width: 100%;
+  }
 }
 .sizeRestraint {
   max-width: 1200px;
