@@ -215,9 +215,6 @@ h2 {
   padding-bottom: 1%;
 }
 @media (max-width: 32rem) {
-  .headerLimited {
-    margin-top: 60px;
-  }
   .number {
     font-size: 1rem;
   }
@@ -356,151 +353,60 @@ h5 {
   font-size: 1rem;
 }
 /*  apply a natural box layout model to all elements  */
+/*  apply a natural box layout model to all elements  */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/*------------Search Bar ------------------------------------------*/
-.searchBox {
-  background-color: #36454f;
-  align-self: center;
-}
-.searchBox input[type=text] {
-  padding: 6px;
-  font-size: 1rem;
-  border: none;
-  margin-right: -4px;
-  width: 80px;
-  border-radius: 5px 0 0 5px;
-}
-.searchBox input[type=text]:focus {
-  width: 80%;
-}
-.searchBox button {
-  border-radius: 0 5px 5px 0;
-  background-color: #f9f4f5;
-  padding: 6px 10px;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  margin: 0;
-  margin-right: 16px;
-}
-.searchBox button:hover {
-  background-color: #ffae42;
-}
-/* Navigation for Large Screens  -------------------------------------------------------- */
-.navBackground {
-  background-color: #36454f;
-}
-.navBar {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-nav {
-  width: 50%;
-  background-color: #36454f;
-}
-nav ul li.active a {
-  color: #fe5b35;
-}
-nav ul {
-  margin-left: 2%;
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-  display: flex;
-}
-nav ul li a {
-  display: block;
-  border: none;
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
-  background: none;
-  font-size: 0.9rem;
-  padding: 0.7rem 0.9rem;
-  color: #ffffff;
-  text-decoration: none;
-  -webkit-transition: background 0.3s linear;
-  transition: background 0.3s linear;
-}
-nav ul li a:hover {
-  background: #2c3840;
-  color: #ffae42;
-}
-nav ul li ul {
-  /* rules for sub menu items*/
-  z-index: 99;
-  position: absolute;
-  background-color: #212b31;
-  left: -999em;
-  /*pushes the menu way off to the side */
-  width: 10em;
-  display: flex;
-  flex-direction: column;
-}
-nav ul li ul li {
-  /*overides the float and line from the parent ul*/
-  border-right: none;
-  border-top: solid 1px rgba(0, 0, 0, 0.2);
-}
-nav ul li:hover ul {
-  /*this displays the menus as drop downs */
-  left: auto;
-  margin-left: 0;
-}
 #hamburgerBtn {
   display: none;
 }
+/* hide the navigation button by default */
 @media only screen and (max-width: 32rem) {
-  /*Navigation Button ----------------------------------------------------------*/
-  .navBackground {
-    background-color: #36454f;
-    width: 100%;
-  }
-  .navBar {
-    position: absolute;
-    top: 0;
-    background-color: #36454f;
-    display: flex;
-    justify-content: space-evenly;
+  /* Navigation Button  -------------------------------------------------------- */
+  body {
+    padding-top: 50px;
   }
   nav {
-    width: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 46px;
     background-color: #36454f;
-    z-index: 1;
+    z-index: 9999;
   }
   #hamburgerBtn {
     display: block;
     width: 7rem;
     height: 2.75rem;
-    background-image: url(../images/menuOpenWhite.png);
+    background-image: url('../images/menuOpenWhite.png');
     background-color: rgba(0, 0, 0, 0.1);
     background-position: 2vw center;
     background-repeat: no-repeat;
     border: 0 none;
   }
   #hamburgerBtn.open {
-    background-image: url(../images/menuCloseWhite.png);
+    background: url('../images/menuCloseWhite.png');
     background-position: 2vw center;
     background-repeat: no-repeat;
   }
-  /* Navigation Bar -------------------------------------------------------------*/
-  ul {
-    flex-direction: column;
-  }
+  /* Navigation Bar -------------------------------------------------------- */
   #primaryNav {
     height: 0;
     overflow: hidden;
     width: 20rem;
     background-color: #36454f;
+    /* change the menu color */
     margin: 0;
     padding: 0;
     z-index: 998;
+    font-family: Verdana;
     font-weight: normal;
   }
   #primaryNav li.active a {
-    background-color: #0d1012;
+    background-color: rgba(0, 0, 0, 0.25);
   }
   #primaryNav li a {
     display: block;
@@ -515,11 +421,11 @@ nav ul li:hover ul {
   #primaryNav li a:hover {
     background-color: rgba(0, 0, 0, 0.5);
   }
-  /* Toggle the navigation bar to expand down */
+  /* Toggle the navigation bar to expand down  */
   #primaryNav.open {
     height: auto;
   }
-  /* Submenus --------------------------------------*/
+  /* Submenus – optional .parent class indicates dropdowns */
   #primaryNav > li:hover > a {
     background: rgba(0, 0, 0, 0.5);
   }
@@ -532,7 +438,7 @@ nav ul li:hover ul {
   #primaryNav li.parent > a:hover {
     background: rgba(0, 0, 0, 0.75);
   }
-  /* Hide the sub menu items by default ---------------------*/
+  /*hide the sub menu items by default*/
   #primaryNav li ul {
     display: none;
     background: rgba(0, 0, 0, 0.3);
@@ -546,17 +452,123 @@ nav ul li:hover ul {
   }
   #primaryNav li:hover ul {
     display: block;
-    position: relative;
   }
   .searchBox {
-    width: 60%;
-    justify-self: space-between;
+    background-color: #36454f;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0.2rem;
   }
-  .searchBox input {
-    margin-left: 30%;
+  .searchBox input[type=search] {
+    font-size: 1rem;
+    border: none;
+    margin-right: -4px;
+    width: 80px;
+    border-radius: 5px 0 0 5px;
+    height: 40px;
   }
-  .searchBox input[type=text]:focus {
-    width: 50%;
+  .searchBox input[type=search]:focus {
+    width: 80%;
+  }
+  .searchBox button {
+    border-radius: 0 5px 5px 0;
+    background-color: #f9f4f5;
+    padding: 6px 10px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+  }
+  .searchBox button:hover {
+    background-color: #ffae42;
+  }
+}
+/* End Mobile Styles */
+/* Navigation for Large Screens  -------------------------------------------------------- */
+@media (min-width: 33rem) {
+  .navBar {
+    background-color: #36454f;
+  }
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav ul li.active a {
+    color: #fe5b35;
+  }
+  nav ul {
+    margin-left: 2%;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    display: block;
+    float: left;
+  }
+  nav ul > li {
+    float: left;
+  }
+  nav ul li a {
+    display: block;
+    border: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    background: none;
+    font-size: 0.9rem;
+    padding: 0.7rem 0.9rem;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transition: background 0.3s linear;
+    transition: background 0.3s linear;
+  }
+  nav ul li a:hover {
+    background: #2c3840;
+    color: #ffae42;
+  }
+  nav ul li ul {
+    /* rules for sub menu items*/
+    z-index: 999;
+    position: absolute;
+    background-color: #212b31;
+    left: -999em;
+    /*pushes the menu way off to the side */
+    width: 10em;
+  }
+  nav ul li ul li {
+    /*overides the float and line from the parent ul*/
+    display: block;
+    border-right: none;
+    border-top: solid 1px rgba(0, 0, 0, 0.2);
+  }
+  nav ul li:hover ul {
+    /*this displays the menus as drop downs */
+    left: auto;
+    margin-left: 0;
+  }
+  nav .searchBox {
+    background-color: #36454f;
+    float: right;
+    padding-right: 2%;
+  }
+  nav .searchBox input[type=search] {
+    font-size: 1rem;
+    border: none;
+    margin-right: -4px;
+    width: 80px;
+    border-radius: 5px 0 0 5px;
+    height: 29px;
+  }
+  nav .searchBox input[type=search]:focus {
+    width: 80%;
+  }
+  nav .searchBox button {
+    border-radius: 0 5px 5px 0;
+    background-color: #f9f4f5;
+    padding: 6px 10px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    height: 29px;
+  }
+  nav .searchBox button:hover {
+    background-color: #ffae42;
   }
 }
 /* Clearfix: force and Element not to collapse --------*/
