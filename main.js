@@ -26,9 +26,13 @@ if(pageHref !==""){
             if(menu[i].parentNode.parentNode.parentNode.tagName === "li"){
                 menu[i].parentNode.parentNode.parentNode.className="parent active";
             }//if
+            else{
+                menu[i].parentNode.className="";
+            }//else
         }//if 
         else{
-            menu[i].parentNode.className="";
-        }//else
+            menu[0].parentNode.className="active";
+        }
     }//for loop
+   
 }//if pageHref
