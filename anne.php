@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
+<?php
+$title="Anne Bennet";
+include 'top.php';
+?>
 
 <div class="LimitSize agents">  
         <h1>Agent - Anne Bennet</h1>
@@ -40,8 +30,7 @@
 </div><!--box-->
         
         <h4> Biography:</h4>
-        <p> I have loved to travel as long as I can remember.  At the age of 12 I asked if I could fly by myself to Hawaii and I never came back.<br>
-       Right out of high school I started to travel school and have had the opportunity to work in many aspects of the industry.  In every aspect I have worked I have had the opportunity to help people travce, to help fulfill people's dreams.  What could be better to do every day?! </p>
+        <p> I have loved to travel l and have had the opportunity to travel all over the world.  In every aspect I have worked I have had the opportunity to help people travle, to help fulfill people's dreams. Nothing can be better than making peoples dreams come true; that is what I do, make dreams come true.</p>
 
         <h4>Customer Comments:  </h4>
             <p>"Thank  you Anne, for all your planning and efforts to ensure that we could enjoy our tour and bring back such wonderful memories."<br>
@@ -51,6 +40,5 @@
             <p>"Thanks for your patience and efficiency.  Let's do it again sometime very soon!"<br>
            -Jane and John Westagar</p>
 </div><!--LimitSize-->        
-        <script src="" async defer></script>
-    </body>
-</html>
+ 
+<?php include "bottom.php";>

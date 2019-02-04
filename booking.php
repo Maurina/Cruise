@@ -1,49 +1,12 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    
-    <body>
-            <div class="navBackground">
-                    <div class="navBar">
-                     <nav class="clearfix">
-                         <button id="hamburgerBtn"></button>
-                             <ul id="primaryNav" class="closed">
-                                 <li class="active"><a href="index.html">Home</a></li>
-                                 <li><a href="cruise.html">Cruises</a></li>
-                                 <li class="parent"><a href="#">Agents</a>
-                                     <ul>
-                                         <li><a href="emmit.html">Emmit Smith</a></li>
-                                         <li><a href="anne.html">Anne Bennet</a></li>
-                                     </ul>
-                                 </li>
-                                 <li><a href="booking.html">Book</a></li>
-                             </ul>
-                     </nav>
-             
-                 <div class="searchBox">
-                    <form action="/action_page.php" class="search">
-                        <input type="text" placeholder="Search..." name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-                 </div><!--end searchBox-->
-                
-                 </div><!--end navBar-->
-             </div><!--navBackground-->
+<?php
+$title="Book Your Trip";
+include 'top.php';
+?>
              <div class="LimitSize">  
       <h1>Book a Cruise</h1>
 
       <form action="" method="GET">
-          <label> Full Name (required)<input type="text" name="name" required></label>
+          <label> Full Name (required)<input type="text" name="name" required class="required"></label>
           <label>Address <input type="text" name="address"></label>
           <label>State<select>
             <option value="AL">Alabama</option>
@@ -101,7 +64,7 @@
     </label>
     <label>ZipCode <input type="text" name="zipcode"></label>
     <label>Phone Number <input type="number" name="phoneNumber"></label>
-    <label>Email <input type="email" name="email"></label>
+    <label>Email <input type="email" name="email" require class="required"></label>
     <label>Select a Cruise <select>
         <option value="">Please Select...</option>
         <option value="Bahamas">Bahamas from Miami $1490</option>
@@ -113,6 +76,5 @@
     <button class="submit">Book My Cruise</button>
       </form>
         </div><!--sizeRestraint-->
-        <script src="" async defer></script>
-    </body>
-</html>
+
+<?php include "bottom.php";>
