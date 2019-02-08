@@ -1,6 +1,6 @@
 <?php
 $title="Anne Bennet";
-include 'top.php';
+include '_top.php';
 ?>
 
 <div class="LimitSize agents">  
@@ -41,4 +41,4 @@ include 'top.php';
            -Jane and John Westagar</p>
 </div><!--LimitSize-->        
  
-<?php include "bottom.php";>
+<?php include "_bottom.php"; ?>

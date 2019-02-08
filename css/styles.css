@@ -139,7 +139,7 @@ table {
   width: 100%;
 }
 h2 {
-  color: #ffae42;
+  color: red;
   font-size: 2rem;
   text-align: center;
 }
@@ -151,7 +151,7 @@ h2 {
 .articleOn img {
   display: block;
   width: 100%;
-  opacity: 0.7;
+  opacity: .7;
 }
 .articleOn img:hover {
   opacity: 1;
@@ -164,7 +164,7 @@ h2 {
   color: #fff;
   font-size: 1.5rem;
   background-color: rgba(14, 12, 12, 0.5);
-  padding: 0.3rem 2%;
+  padding: .3rem 2%;
   text-align: center;
 }
 .articleOn .bottom {
@@ -207,7 +207,7 @@ h2 {
 }
 .headerLimited header .number {
   text-decoration: none;
-  color: #36454f;
+  color: red;
   font-size: 2rem;
   font-weight: bold;
   padding-right: 2%;
@@ -221,12 +221,12 @@ h2 {
 }
 footer {
   background-color: #ffae42;
-  color: #36454f;
+  color: red;
   font-size: 1.5rem;
 }
 footer a {
   text-decoration: none;
-  color: #36454f;
+  color: red;
 }
 footer a:hover {
   font-weight: bold;
@@ -264,7 +264,7 @@ p {
   border: none;
   font-size: 1.5rem;
   background-color: #f9f4f5;
-  color: #36454f;
+  color: red;
   margin-top: 5%;
   text-align: center;
   padding: 2%;
@@ -274,7 +274,7 @@ p {
   width: 80%;
   font-size: 1.5rem;
   background-color: #f9f4f5;
-  color: #36454f;
+  color: red;
   font-weight: bold;
   margin-top: 5%;
   padding: 2%;
@@ -326,7 +326,7 @@ p {
   }
 }
 .wrapperSocial {
-  background-color: #36454f;
+  background-color: red;
 }
 .socialMedia {
   font-size: 3rem;
@@ -342,7 +342,7 @@ p {
 }
 .socialMedia i:hover {
   background-color: #fe5b35;
-  color: #36454f;
+  color: red;
 }
 .copyRight {
   background-image: linear-gradient(#ffae42, #fe5b35);
@@ -374,7 +374,7 @@ h5 {
     left: 0;
     width: 100%;
     height: 46px;
-    background-color: #36454f;
+    background-color: red;
     z-index: 9999;
   }
   #hamburgerBtn {
@@ -397,7 +397,7 @@ h5 {
     height: 0;
     overflow: hidden;
     width: 20rem;
-    background-color: #36454f;
+    background-color: red;
     /* change the menu color */
     margin: 0;
     padding: 0;
@@ -411,7 +411,7 @@ h5 {
   #primaryNav li a {
     display: block;
     width: 100%;
-    padding: 0.75rem 2vw;
+    padding: .75rem 2vw;
     font-size: 14px;
     text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.15);
     color: white;
@@ -430,7 +430,7 @@ h5 {
     background: rgba(0, 0, 0, 0.5);
   }
   #primaryNav li.parent > a:after {
-    font-size: 0.75rem;
+    font-size: .75rem;
     content: "\25BC";
     color: rgba(255, 255, 255, 0.5);
     float: right;
@@ -454,11 +454,11 @@ h5 {
     display: block;
   }
   .searchBox {
-    background-color: #36454f;
+    background-color: red;
     float: right;
     position: absolute;
     top: 0;
-    right: 0.2rem;
+    right: .2rem;
   }
   .searchBox input[type=search] {
     font-size: 1rem;
@@ -488,7 +488,7 @@ h5 {
 /* Navigation for Large Screens  -------------------------------------------------------- */
 @media (min-width: 33rem) {
   .navBar {
-    background-color: #36454f;
+    background-color: red;
   }
   nav {
     max-width: 1200px;
@@ -511,22 +511,22 @@ h5 {
     border: none;
     border-right: 1px solid rgba(0, 0, 0, 0.2);
     background: none;
-    font-size: 0.9rem;
-    padding: 0.7rem 0.9rem;
+    font-size: .9rem;
+    padding: .7rem .9rem;
     color: #ffffff;
     text-decoration: none;
     -webkit-transition: background 0.3s linear;
     transition: background 0.3s linear;
   }
   nav ul li a:hover {
-    background: #2c3840;
+    background: #e60000;
     color: #ffae42;
   }
   nav ul li ul {
     /* rules for sub menu items*/
     z-index: 999;
     position: absolute;
-    background-color: #212b31;
+    background-color: #cc0000;
     left: -999em;
     /*pushes the menu way off to the side */
     width: 10em;
@@ -543,7 +543,7 @@ h5 {
     margin-left: 0;
   }
   nav .searchBox {
-    background-color: #36454f;
+    background-color: red;
     float: right;
     padding-right: 2%;
   }
@@ -637,11 +637,11 @@ img {
   padding-bottom: 2%;
 }
 form {
-  padding-top: 4%;
+  padding-top: 8%;
 }
 form select {
-  border: 1px solid #36454f;
-  color: #36454f;
+  border: 1px solid red;
+  color: red;
   width: 50%;
   height: 44px;
 }
@@ -654,12 +654,12 @@ form label {
   display: flex;
   flex-direction: column;
   padding-bottom: 2%;
-  color: #36454f;
+  color: red;
   margin-bottom: 2%;
 }
 form input {
-  border: 1px solid #36454f;
-  color: #36454f;
+  border: 1px solid red;
+  color: red;
   width: 50%;
   height: 44px;
 }
@@ -717,7 +717,7 @@ form input {
 }
 .agents figcaption {
   text-align: center;
-  color: #36454f;
+  color: red;
 }
 @media (max-width:  64rem) {
   .agents figcaption {
@@ -728,24 +728,4 @@ form input {
   .agents figcaption {
     width: 100%;
   }
-}
-.sizeRestraint {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  flex-wrap: wrap;
-}
-.LimitSize {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  padding-left: 4%;
-}
-h1 {
-  color: #36454f;
-  font-size: 4rem;
 }

@@ -1,6 +1,6 @@
 <?php
 $title="Book Your Trip";
-include 'top.php';
+include '_top.php';
 ?>
              <div class="LimitSize">  
       <h1>Book a Cruise</h1>
@@ -77,4 +77,4 @@ include 'top.php';
       </form>
         </div><!--sizeRestraint-->
 
-<?php include "bottom.php";>
+<?php include "_bottom.php"; ?>

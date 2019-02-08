@@ -1,6 +1,6 @@
 <?php
 $title="Cuises";
-include 'top.php';
+include '_top.php';
 ?>
  
 <div class="LimitSize">  
@@ -49,4 +49,4 @@ include 'top.php';
 </div><!--box-->   
 </div><!--LimitSize-->
 
-<?php include "bottom.php";>
+<?php include "_bottom.php"; ?>

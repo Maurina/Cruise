@@ -1,6 +1,6 @@
 <?php
 $title="Emmit Smith";
-include 'top.php';
+include '_top.php';
 ?>
             <div class="LimitSize agents">  
                     <h1>Agent - Emmit Smith</h1>
@@ -42,4 +42,4 @@ include 'top.php';
                   
             </div><!--LimitSize-->  
         
- <?php include "bottom.php";>
+<?php include "_bottom.php"; ?>
