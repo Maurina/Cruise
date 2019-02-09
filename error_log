@@ -1,0 +1,16 @@
+[08-Feb-2019 15:48:05 UTC] PHP Parse error:  syntax error, unexpected '>', expecting end of file in /home2/maurinad/public_html/dgm3740/index.php on line 53
+[08-Feb-2019 15:48:28 UTC] PHP Parse error:  syntax error, unexpected '>', expecting end of file in /home2/maurinad/public_html/dgm3740/index.php on line 53
+[08-Feb-2019 19:54:29 UTC] PHP Parse error:  syntax error, unexpected '>', expecting end of file in /home2/maurinad/public_html/dgm3740/cruise.php on line 52
+[08-Feb-2019 20:20:54 UTC] PHP Parse error:  syntax error, unexpected '>', expecting end of file in /home2/maurinad/public_html/dgm3740/cruise.php on line 52
+[08-Feb-2019 20:21:01 UTC] PHP Parse error:  syntax error, unexpected '>', expecting end of file in /home2/maurinad/public_html/dgm3740/emmit.php on line 45
+[08-Feb-2019 20:21:11 UTC] PHP Parse error:  syntax error, unexpected '>', expecting end of file in /home2/maurinad/public_html/dgm3740/cruise.php on line 52
+[08-Feb-2019 20:25:01 UTC] PHP Parse error:  syntax error, unexpected '>', expecting end of file in /home2/maurinad/public_html/dgm3740/cruise.php on line 52
+[08-Feb-2019 20:29:08 UTC] PHP Warning:  include(_top.php): failed to open stream: No such file or directory in /home2/maurinad/public_html/dgm3740/anne_1eblgmmjkl.php on line 3
+[08-Feb-2019 20:29:08 UTC] PHP Warning:  include(_top.php): failed to open stream: No such file or directory in /home2/maurinad/public_html/dgm3740/anne_1eblgmmjkl.php on line 3
+[08-Feb-2019 20:29:08 UTC] PHP Warning:  include(): Failed opening '_top.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home2/maurinad/public_html/dgm3740/anne_1eblgmmjkl.php on line 3
+[08-Feb-2019 20:29:08 UTC] PHP Warning:  include(_bottom.php): failed to open stream: No such file or directory in /home2/maurinad/public_html/dgm3740/anne_1eblgmmjkl.php on line 44
+[08-Feb-2019 20:29:08 UTC] PHP Warning:  include(_bottom.php): failed to open stream: No such file or directory in /home2/maurinad/public_html/dgm3740/anne_1eblgmmjkl.php on line 44
+[08-Feb-2019 20:29:08 UTC] PHP Warning:  include(): Failed opening '_bottom.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home2/maurinad/public_html/dgm3740/anne_1eblgmmjkl.php on line 44
+[08-Feb-2019 20:29:48 UTC] PHP Parse error:  syntax error, unexpected '>', expecting end of file in /home2/maurinad/public_html/dgm3740/cruise.php on line 52
+[08-Feb-2019 20:29:59 UTC] PHP Parse error:  syntax error, unexpected '>', expecting end of file in /home2/maurinad/public_html/dgm3740/booking.php on line 80
+[08-Feb-2019 20:30:34 UTC] PHP Parse error:  syntax error, unexpected '>', expecting end of file in /home2/maurinad/public_html/dgm3740/cruise.php on line 52

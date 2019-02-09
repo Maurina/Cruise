@@ -64,7 +64,7 @@ include '_top.php';
     </label>
     <label>ZipCode <input type="text" name="zipcode"></label>
     <label>Phone Number <input type="number" name="phoneNumber"></label>
-    <label>Email <input type="email" name="email" require class="required"></label>
+    <label>Email (required) <input type="email" name="email" require class="required"></label>
     <label>Select a Cruise <select>
         <option value="">Please Select...</option>
         <option value="Bahamas">Bahamas from Miami $1490</option>
